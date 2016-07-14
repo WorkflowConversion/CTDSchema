@@ -73,7 +73,7 @@
 						<xs:documentation>The actual value of the parameter.</xs:documentation>
 					</xs:annotation>
 				</xs:attribute>
-				<xs:attribute name="default_value" type="xs:string" use="optional">
+				<xs:attribute name="default" type="xs:string" use="optional">
 					<xs:annotation>
 						<xs:documentation>If available, the default value of the given parameter.</xs:documentation>
 					</xs:annotation>

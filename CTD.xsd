@@ -5,7 +5,7 @@
 	<xs:include schemaLocation="Param_1_7_0.xsd" />
 	<xs:element name="tool">
 		<xs:complexType>
-			<xs:sequence>
+			<xs:all>
 				<xs:element name="description" type="xs:string" minOccurs="0">
 					<xs:annotation>
 						<xs:documentation>One line description of the tool.</xs:documentation>
@@ -39,15 +39,15 @@
 					</xs:annotation>
 				</xs:element>
 				<xs:element name="PARAMETERS" type="PARAMETERSType" />
-			</xs:sequence>
+			</xs:all>
 			<xs:attribute name="version" type="xs:string" use="required" />
 			<xs:attribute name="name" use="required">
 				<xs:annotation>
-					<xs:documentation>Name of the tool. Needs to pass following regular expression [A-Z][A-Za-z0-9]*</xs:documentation>
+					<xs:documentation>Name of the tool. Needs to pass following regular expression [A-Za-z0-9]+</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
-						<xs:pattern value="[A-Z][A-Za-z0-9]*" />
+						<xs:pattern value="[A-Za-z0-9]+" />
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:attribute>
