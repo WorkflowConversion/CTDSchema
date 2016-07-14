@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tool version="1.17.1" name="wget" category="Data" ctdVersion="1.7">
+    <description>Wget - The non-interactive network downloader.</description>
+    <executableName>wget</executableName>
+    
+    <PARAMETERS version="1.7">
+        <NODE name="wget" description="Parameters for wget">
+            <ITEM name="outputDocument" type="output-file" description="Loction of the output file" required="true" value=""/>
+            <ITEM name="noCertificate" type="bool" description="Skip checking of certificate" required="false" value="false"/>
+            <ITEM name="noVerbose" type="bool" description="Print important information" required="false" value="true"/>
+            
+            <!-- url is a positional parameter, so it should be at the very end!!! -->
+            <ITEM name="url" type="string" description="URL to download" required="true" value=""/>
+        </NODE>
+    </PARAMETERS>
+    
+	<cli>
+		<clielement optionIdentifier="--output-document">
+			<mapping referenceName="outputDocument" />
+		</clielement>
+		
+		<clielement optionIdentifier="--no-check-certificate">
+			<mapping referenceName="noCertificate" />
+		</clielement>
+		
+		<clielement optionIdentifier="--no-verbose">
+			<mapping referenceName="noVerbose" />
+		</clielement>
+		
+		<!-- leave this one blank on purpose -->
+		<clielement optionIdentifier="">
+			<mapping referenceName="url"/>
+		</clielement>
+	</cli> 	   
+</tool>
