@@ -52,6 +52,11 @@
 				<xs:documentation>Deprecated, embed as tag into tags attribute. Will be removed in v2.0.0 of the schema.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
+		<xs:attribute name="position" type="xs:nonNegativeInteger" use="optional">
+			<xs:annotation>
+				<xs:documentation>Position of the parameter (0-based). Certain parameters are not associated to an option identifier, rather, to the position on which they appear on the command-line.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="ITEMLISTType">
 		<xs:complexContent>
